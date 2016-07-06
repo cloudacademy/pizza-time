@@ -1,6 +1,8 @@
-Django
-djangorestframework
-markdown
-django-filter
-mysql-python
-djangorestframework-jwt
+Django==1.9.7
+django-filter==0.13.0
+djangorestframework==3.3.3
+djangorestframework-jwt==1.8.0
+Markdown==2.6.6
+MySQL-python==1.2.5
+PyJWT==1.4.0
+virtualenv==15.0.2
