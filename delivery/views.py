@@ -2,6 +2,19 @@ from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from delivery.serializers import *
 from delivery.models import Pizza, Order
+from django.shortcuts import render, render_to_response
+from django.template import RequestContext
+
+
+def index(request):
+    return render(request, 'index.html')
+
+def handler404(request):
+    response = render_to_response('index.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 200
+    return response
+
 
 class UserViewSet(viewsets.ModelViewSet):
     """
