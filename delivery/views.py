@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from serializers import *
+from delivery.serializers import *
 from delivery.models import Pizza, Order
 
 class UserViewSet(viewsets.ModelViewSet):
