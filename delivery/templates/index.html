@@ -3,7 +3,6 @@
 <html lang="en" ng-app="pizza">
   <head>
     <meta charset="utf-8">
-    <base href="/"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pizza time!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +28,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><img src="static/img/brand.png" alt=""/></a>
+          <a class="navbar-brand" href="#/"><img src="static/img/brand.png" alt=""/></a>
         </div>
 
         <div ng-hide="isAuthenticated">
@@ -51,9 +50,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav" bs-active-link>
-            <li ng-show="isAuthenticated"><a href="/orders">Orders</a></li>
-            <li><a href="/about">About</a></li>
-            <li ng-show="isAuthenticated"><a href="#" ng-click="logout()">Logout</a></li>
+            <li ng-show="isAuthenticated"><a href="#/orders">Orders</a></li>
+            <li><a href="#/about">About</a></li>
+            <li ng-show="isAuthenticated"><a href="#/" ng-click="logout()">Logout</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
 
@@ -74,6 +73,7 @@
     <script src="static/js/main.js"></script>
     <script src="static/js/directives/nav.js"></script>
     <script src="static/js/controllers/user-controller.js"></script>
+    <script src="static/js/controllers/orders-controller.js"></script>
 
 
   </body>
