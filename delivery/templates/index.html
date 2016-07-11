@@ -15,15 +15,11 @@
     <link href="static/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
     <link href="static/css/main.css" rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="static/img/favicon.png">
-    <script src="static/js/angular.min.js"></script>
-    <script src="static/js/angular-route.min.js"></script>
-    <script src="static/js/main.js"></script>
-    <script src="static/js/directives/nav.js"></script>
   </head>
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" ng-controller="UserCtrl">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -36,16 +32,31 @@
           <a class="navbar-brand" href="/"><img src="static/img/brand.png" alt=""/></a>
         </div>
 
+        <div ng-hide="isAuthenticated">
+          <form id="id_auth_form" class="navbar-form navbar-right" ng-submit="login()">
+            <div class="form-group">
+              <input ng-model="user.username" required name="username"
+              type="text" placeholder="Username" class="form-control">
+            </div>
+            <div class="form-group">
+              <input ng-model="user.password" required name="password" type="password"
+              placeholder="Password" class="form-control">
+            </div>
+            <div class="btn-group">
+              <input type="submit" class="btn btn-default" value="Login">
+            </div>
+          </form>
+        </div>
+
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right" bs-active-link>
-            <li><a href="/orders">Orders</a></li>
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav" bs-active-link>
+            <li ng-show="isAuthenticated"><a href="/orders">Orders</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="/auth">Login</a></li>
-            <li class="dropdown">
-            </li>
+            <li ng-show="isAuthenticated"><a href="#" ng-click="logout()">Logout</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
+
       </div><!-- /.container-fluid -->
     </nav>
 
@@ -57,6 +68,13 @@
     <script src="static/js/jquery-1.12.2.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="static/js/bootstrap.min.js"></script>
+    <!-- Angular scripts -->
+    <script src="static/js/angular.min.js"></script>
+    <script src="static/js/angular-route.min.js"></script>
+    <script src="static/js/main.js"></script>
+    <script src="static/js/directives/nav.js"></script>
+    <script src="static/js/controllers/user-controller.js"></script>
+
 
   </body>
 </html>

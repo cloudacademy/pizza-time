@@ -9,8 +9,8 @@ angular.module('pizza', ['ngRoute'])
     templateUrl: 'static/partials/about.html',
     // controller: 'AboutController'
   })
-  .when('/auth', {
-    templateUrl: 'static/partials/auth.html',
+  .when('/orders', {
+    templateUrl: 'static/partials/orders.html',
     // controller: 'AboutController'
   })
   .otherwise({

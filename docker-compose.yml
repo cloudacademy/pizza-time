@@ -2,8 +2,8 @@ version: '2'
 services:
   db:
     image: mysql
-    volumes:
-      - "./.data/db:/var/lib/mysql"
+    # volumes:
+    #   - "./.data/db:/var/lib/mysql"
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
