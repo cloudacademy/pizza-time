@@ -52,11 +52,12 @@
         <div class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav" bs-active-link>
             <li ng-show="isAuthenticated"><a href="#/new-order">New Order</a></li>
+            <li ng-show="isAuthenticated"><a href="#/orders">All orders</a></li>
             <li><a href="#/about">About</a></li>
             <li class="dropdown" ng-show="isAuthenticated">
               <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ user.username }} <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#/orders">My orders</a></li>
+                <li><a href="#/new-order">New Order</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#/" ng-click="logout()">Logout</a></li>
               </ul>
@@ -83,6 +84,7 @@
     <script src="static/js/directives/nav.js"></script>
     <script src="static/js/controllers/user-controller.js"></script>
     <script src="static/js/controllers/orders-controller.js"></script>
+    <script src="static/js/controllers/get-order-controller.js"></script>
 
 
   </body>

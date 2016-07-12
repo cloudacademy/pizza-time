@@ -7,6 +7,8 @@ from django.db import models
 class Pizza(models.Model):
     name = models.CharField(max_length=30)
     price = models.DecimalField(max_digits=5, decimal_places=2)
+    def __unicode__(self):
+        return u"%s" % (self.name)
 
 class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -1,0 +1,89 @@
+- model: delivery.pizza
+  pk: 1
+  fields:
+    name: Cheese
+    price: 11.23
+- model: delivery.pizza
+  pk: 2
+  fields:
+    name: Mexican
+    price: 13.23
+- model: delivery.pizza
+  pk: 3
+  fields:
+    name: Marinara
+    price: 11.00
+- model: delivery.pizza
+  pk: 4
+  fields:
+    name: Prosciutto
+    price: 13.23
+
+- model: delivery.pizza
+  pk: 5
+  fields:
+    name: Funghi
+    price: 11.23
+- model: delivery.pizza
+  pk: 6
+  fields:
+    name: Napoletana
+    price: 13.23
+- model: delivery.pizza
+  pk: 7
+  fields:
+    name: Broccoli
+    price: 11.00
+- model: delivery.pizza
+  pk: 8
+  fields:
+    name: Portuguesa
+    price: 13.23
+- model: delivery.pizza
+  pk: 9
+  fields:
+    name: Capricciosa
+    price: 11.00
+- model: delivery.pizza
+  pk: 10
+  fields:
+    name: Vegetarian
+    price: 13.23
+- model: auth.user
+  pk: 1
+  fields:
+    username: josef
+- model: auth.user
+  pk: 2
+  fields:
+    username: kimberly
+- model: auth.user
+  pk: 3
+  fields:
+    username: carlos
+- model: delivery.order
+  pk: 1
+  fields:
+    user: 1
+    pizzas:
+      - 9
+      - 10
+    total: 24.23
+    status: Delivered
+- model: delivery.order
+  pk: 2
+  fields:
+    user: 2
+    pizzas:
+      - 7
+      - 7
+    total: 22
+    status: Delivered
+- model: delivery.order
+  pk: 3
+  fields:
+    user: 3
+    pizzas:
+      - 8
+    total: 13.23
+    status: Ordered

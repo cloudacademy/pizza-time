@@ -1,15 +1,15 @@
 version: '2'
 services:
   db:
-    image: mysql
-    # volumes:
-    #   - "./.data/db:/var/lib/mysql"
+    image: mysql:5.7
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: pizza
   web:
     build: .
+    depends_on:
+      - db
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code

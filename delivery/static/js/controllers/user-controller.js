@@ -18,7 +18,7 @@ function url_base64_decode(str) {
 }
 
 app.controller('UserCtrl', function ($scope, $http, $window) {
-  $scope.user = {username: 'root', password: 'start123'};
+  $scope.user = {username: 'root', password: 'daadstac'};
   $scope.isAuthenticated = false;
   $scope.welcome = '';
   $scope.message = '';

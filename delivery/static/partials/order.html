@@ -1,24 +1,22 @@
 <div class="container">
 
-  <h3>Order #{{id}}</h3>
+  <h3>Order #{{order.id}}</h3>
   <hr>
   <table class="table table-hover">
    <thead>
      <tr>
-       <th>ID</th>
        <th>Client</th>
-       <th>Status</th>
        <th>Pizzas</th>
        <th>Total</th>
+       <th>Status</th>
      </tr>
    </thead>
    <tbody>
-     <tr ng-repeat="order in orders">
-       <td>{{order.id}}</td>
-       <td>{{order.user}}</td>
-       <td>{{order.status}}</td>
+     <tr>
+        <td>{{order.user}}</td>
        <td>{{order.pizzas}}</td>
        <td>{{order.total}}</td>
+       <td>{{order.status}}</td>
      </tr>
    </tbody>
  </table>
