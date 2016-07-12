@@ -11,26 +11,10 @@ angular.module('pizza', ['ngRoute'])
   })
   .when('/orders', {
     templateUrl: 'static/partials/orders.html',
-    controller: 'OrdersCtrl'
+    controller: 'OrdersCtrl',
   })
-})
-.factory('authInterceptor', function ($rootScope, $q, $window) {
-  return {
-    request: function (config) {
-      config.headers = config.headers || {};
-      if ($window.sessionStorage.token) {
-        config.headers.Authorization = 'JWT ' + $window.sessionStorage.token;
-      }
-      return config;
-    },
-    responseError: function (rejection) {
-      if (rejection.status === 401) {
-        // handle the case where the user is not authenticated
-      }
-      return $q.reject(rejection);
-    }
-  };
-})
-.config(function ($httpProvider) {
-  $httpProvider.interceptors.push('authInterceptor');
+  .when('/orders/:id', {
+    templateUrl: 'static/partials/order.html',
+    controller: 'OrdersCtrl',
+  });
 });

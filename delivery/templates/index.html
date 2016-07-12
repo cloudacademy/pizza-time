@@ -15,10 +15,11 @@
     <link href="static/css/main.css" rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="static/img/favicon.png">
   </head>
-  <body>
+  {% verbatim %}
+  <body ng-controller="UserCtrl">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" ng-controller="UserCtrl">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -50,9 +51,16 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav" bs-active-link>
-            <li ng-show="isAuthenticated"><a href="#/orders">Orders</a></li>
+            <li ng-show="isAuthenticated"><a href="#/new-order">New Order</a></li>
             <li><a href="#/about">About</a></li>
-            <li ng-show="isAuthenticated"><a href="#/" ng-click="logout()">Logout</a></li>
+            <li class="dropdown" ng-show="isAuthenticated">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ user.username }} <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#/orders">My orders</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#/" ng-click="logout()">Logout</a></li>
+              </ul>
+            </li>
           </ul>
         </div><!-- /.navbar-collapse -->
 
@@ -62,6 +70,7 @@
     <div class="content">
       <ng-view></ng-view>
     </div>
+    {% endverbatim %}
 
     <!-- jQuery -->
     <script src="static/js/jquery-1.12.2.min.js"></script>

@@ -6,20 +6,15 @@ from delivery.models import Pizza, Order
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ('url', 'username', 'email', 'groups')
+        fields = ('username', 'email', 'groups')
 
-
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Group
-        fields = ('url', 'name')
 
 class PizzaSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Pizza
-        fields = ('url', 'name', 'price')
+        fields = ('name', 'price')
 
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Order
-        fields = ('url', 'user', 'pizzas', 'total', 'status', 'tracking')
+        fields = ('id', 'user', 'pizzas', 'total', 'status')

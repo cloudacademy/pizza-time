@@ -20,4 +20,8 @@ app.controller('OrdersCtrl', function ($scope, $http, $window) {
     console.log(data);
   });
 
+  $scope.newOrder = function () {
+
+  };
+
 });

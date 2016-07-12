@@ -1,22 +1,28 @@
 <div class="container">
 
-  <h3>Orders</h3>
+  <h3>Order #{{id}}</h3>
   <hr>
   <table class="table table-hover">
    <thead>
      <tr>
        <th>ID</th>
+       <th>Client</th>
        <th>Status</th>
-       <th>Details</th>
+       <th>Pizzas</th>
+       <th>Total</th>
      </tr>
    </thead>
    <tbody>
      <tr ng-repeat="order in orders">
        <td>{{order.id}}</td>
+       <td>{{order.user}}</td>
        <td>{{order.status}}</td>
-       <td><a href="#/orders/{{order.id}}">Details</a></td>
+       <td>{{order.pizzas}}</td>
+       <td>{{order.total}}</td>
      </tr>
    </tbody>
  </table>
+ <br>
+ <a href="#/orders">Go back</a>
 
-</div> <!-- /container -->
+</div>

@@ -13,4 +13,3 @@ class Order(models.Model):
     pizzas = models.ManyToManyField(Pizza)
     total = models.DecimalField(max_digits=7, decimal_places=2)
     status = models.CharField(max_length=30)
-    tracking = models.CharField(max_length=30)
