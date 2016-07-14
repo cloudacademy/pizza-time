@@ -17,11 +17,17 @@ function url_base64_decode(str) {
   return window.atob(output); //polifyll https://github.com/davidchambers/Base64.js
 }
 
-app.controller('UserCtrl', function ($scope, $http, $window) {
+app.controller('UserCtrl', function ($scope, $http, $window, $rootScope) {
   $scope.user = {username: 'josef', password: 'start123'};
   $scope.isAuthenticated = false;
   $scope.welcome = '';
   $scope.message = '';
+
+  $rootScope.authInfo =   {
+    "username": "",
+    "id": "",
+    "url": ""
+  };
 
   $scope.login = function () {
     $http
@@ -29,9 +35,20 @@ app.controller('UserCtrl', function ($scope, $http, $window) {
       .success(function (data, status, headers, config) {
         $window.sessionStorage.token = data.token;
         $scope.isAuthenticated = true;
+        $rootScope.sessionToken = data.token;
         var encodedProfile = data.token.split('.')[1];
         var profile = JSON.parse(url_base64_decode(encodedProfile));
-        $scope.welcome = 'Welcome ' + profile.first_name + ' ' + profile.last_name;
+        $http({url: '/api/users/', method: 'GET'})
+          .success(function (data, status, headers, config) {
+            for (var i = 0; i < data.length ; i++){
+              if (data[i].username == $scope.user.username){
+                $rootScope.authInfo = data[i];
+              };
+            };
+          })
+          .error(function (data, status, headers, config) {
+            alert(data);
+        });
       })
       .error(function (data, status, headers, config) {
         // Erase the token if the user fails to log in
@@ -49,17 +66,12 @@ app.controller('UserCtrl', function ($scope, $http, $window) {
     $scope.welcome = '';
     $scope.message = '';
     $scope.isAuthenticated = false;
+    $rootScope.authInfo =   {
+      "username": "",
+      "id": "",
+      "url": ""
+    };
     delete $window.sessionStorage.token;
-  };
-
-  $scope.callRestricted = function () {
-    $http({url: '/api/*', method: 'GET'})
-    .success(function (data, status, headers, config) {
-      $scope.message = $scope.message + ' ' + data.name; // Should log 'foo'
-    })
-    .error(function (data, status, headers, config) {
-      alert(data);
-    });
   };
 
 })

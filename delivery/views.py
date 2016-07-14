@@ -9,7 +9,7 @@ from django.template import RequestContext
 def index(request):
     return render(request, 'index.html')
 
-class UserViewSet(viewsets.ModelViewSet):
+class UserViewSet(viewsets.ReadOnlyModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """

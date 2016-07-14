@@ -6,13 +6,13 @@ from delivery.models import Pizza, Order
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ('username', 'id')
+        fields = ('username', 'id', 'url')
 
 
 class PizzaSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Pizza
-        fields = ('name', 'price')
+        fields = ('name', 'price', 'url')
 
 class GetOrderSerializer(serializers.HyperlinkedModelSerializer):
     pizzas = serializers.StringRelatedField(many=True)
@@ -22,9 +22,9 @@ class GetOrderSerializer(serializers.HyperlinkedModelSerializer):
      )
     class Meta:
         model = Order
-        fields = ('id', 'user', 'pizzas', 'total', 'status')
+        fields = ('id', 'user', 'pizzas', 'total', 'status', 'url')
 
 class NewOrderSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Order
-        fields = ('id', 'user', 'pizzas', 'total', 'status')
+        fields = ('id', 'user', 'pizzas', 'total', 'status', 'url')
