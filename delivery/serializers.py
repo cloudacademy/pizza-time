@@ -14,12 +14,17 @@ class PizzaSerializer(serializers.HyperlinkedModelSerializer):
         model = Pizza
         fields = ('name', 'price')
 
-class OrderSerializer(serializers.HyperlinkedModelSerializer):
+class GetOrderSerializer(serializers.HyperlinkedModelSerializer):
     pizzas = serializers.StringRelatedField(many=True)
     user = serializers.SlugRelatedField(
         read_only=True,
         slug_field='username'
      )
+    class Meta:
+        model = Order
+        fields = ('id', 'user', 'pizzas', 'total', 'status')
+
+class NewOrderSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Order
         fields = ('id', 'user', 'pizzas', 'total', 'status')

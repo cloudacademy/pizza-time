@@ -1,0 +1,191 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$24000$xSEHp5H6yqde$Xz7Roj7Nc2j0gIA+M48/cAryyd9O9nart7D8G8dQgb8=",
+        "last_login": "2016-07-14T16:35:23.342Z",
+        "is_superuser": false,
+        "username": "josef",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-07-14T16:26:20.532Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$24000$xSEHp5H6yqde$Xz7Roj7Nc2j0gIA+M48/cAryyd9O9nart7D8G8dQgb8=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "kimberly",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-07-14T16:26:20.535Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$24000$xSEHp5H6yqde$Xz7Roj7Nc2j0gIA+M48/cAryyd9O9nart7D8G8dQgb8=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "carlos",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-07-14T16:26:20.537Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$24000$xSEHp5H6yqde$Xz7Roj7Nc2j0gIA+M48/cAryyd9O9nart7D8G8dQgb8=",
+        "last_login": "2016-07-14T17:51:15.070Z",
+        "is_superuser": true,
+        "username": "root",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2016-07-14T16:26:20.540Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "delivery.pizza",
+    "pk": 1,
+    "fields": {
+        "name": "Cheese",
+        "price": "11.23"
+    }
+},
+{
+    "model": "delivery.pizza",
+    "pk": 2,
+    "fields": {
+        "name": "Mexican",
+        "price": "13.23"
+    }
+},
+{
+    "model": "delivery.pizza",
+    "pk": 3,
+    "fields": {
+        "name": "Marinara",
+        "price": "11.00"
+    }
+},
+{
+    "model": "delivery.pizza",
+    "pk": 4,
+    "fields": {
+        "name": "Prosciutto",
+        "price": "13.23"
+    }
+},
+{
+    "model": "delivery.pizza",
+    "pk": 5,
+    "fields": {
+        "name": "Funghi",
+        "price": "11.23"
+    }
+},
+{
+    "model": "delivery.pizza",
+    "pk": 6,
+    "fields": {
+        "name": "Napoletana",
+        "price": "13.23"
+    }
+},
+{
+    "model": "delivery.pizza",
+    "pk": 7,
+    "fields": {
+        "name": "Broccoli",
+        "price": "11.00"
+    }
+},
+{
+    "model": "delivery.pizza",
+    "pk": 8,
+    "fields": {
+        "name": "Portuguesa",
+        "price": "13.23"
+    }
+},
+{
+    "model": "delivery.pizza",
+    "pk": 9,
+    "fields": {
+        "name": "Capricciosa",
+        "price": "11.00"
+    }
+},
+{
+    "model": "delivery.pizza",
+    "pk": 10,
+    "fields": {
+        "name": "Vegetarian",
+        "price": "13.23"
+    }
+},
+{
+    "model": "delivery.order",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "total": "24.23",
+        "status": "Delivered",
+        "pizzas": [
+            9,
+            10
+        ]
+    }
+},
+{
+    "model": "delivery.order",
+    "pk": 2,
+    "fields": {
+        "user": 2,
+        "total": "22.00",
+        "status": "Delivered",
+        "pizzas": [
+            7
+        ]
+    }
+},
+{
+    "model": "delivery.order",
+    "pk": 3,
+    "fields": {
+        "user": 3,
+        "total": "13.23",
+        "status": "Ordered",
+        "pizzas": [
+            8
+        ]
+    }
+}
+]

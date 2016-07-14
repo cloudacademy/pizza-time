@@ -3,7 +3,7 @@ var app = angular.module('pizza');
 app.controller('GetOrderCtrl', [ '$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
   var id = $routeParams.id;
 
-  $http({url: '/api/orders/' + id, method: 'GET'})
+  $http({url: '/api/orders/get/' + id, method: 'GET'})
   .success(function (data, status, headers, config) {
     $scope.order = data;
   })

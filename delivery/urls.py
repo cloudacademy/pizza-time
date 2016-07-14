@@ -6,8 +6,9 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
-router.register(r'pizzas', views.PizzaViewSet)
-router.register(r'orders', views.OrderViewSet)
+router.register(r'pizzas/get', views.PizzaViewSet)
+router.register(r'orders/get', views.GetOrderViewSet)
+router.register(r'orders/new', views.NewOrderViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

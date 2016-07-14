@@ -14,7 +14,9 @@
    <tbody>
      <tr>
         <td>{{order.user}}</td>
-       <td>{{order.pizzas}}</td>
+       <td><p ng-repeat="pizza in order.pizzas">
+         {{pizza}}
+       </p></td>
        <td>{{order.total}}</td>
        <td>{{order.status}}</td>
      </tr>
