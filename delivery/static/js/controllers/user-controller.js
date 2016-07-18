@@ -35,7 +35,6 @@ app.controller('UserCtrl', function ($scope, $http, $window, $rootScope) {
       .success(function (data, status, headers, config) {
         $window.sessionStorage.token = data.token;
         $scope.isAuthenticated = true;
-        $rootScope.sessionToken = data.token;
         var encodedProfile = data.token.split('.')[1];
         var profile = JSON.parse(url_base64_decode(encodedProfile));
         $http({url: '/api/users/', method: 'GET'})

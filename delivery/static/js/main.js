@@ -16,7 +16,7 @@ angular.module('pizza', ['ngRoute'])
     templateUrl: 'static/partials/new-order.html',
     controller: 'NewOrderCtrl',
   })
-  .when('/orders/:id', {
+  .when('/orders/:id/:new', {
     templateUrl: 'static/partials/order.html',
     controller: 'GetOrderCtrl',
   });

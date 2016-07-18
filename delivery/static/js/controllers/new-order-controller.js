@@ -36,27 +36,20 @@ app.controller('NewOrderCtrl', function ($scope, $http, $window, $rootScope) {
         $scope.order.pizzas.push(obj.url);
         $scope.selectedPizzas.push({name: obj.name, price: obj.price });
       };
+      if ($scope.order.pizzas.length > 0){
+        $scope.order.total += 5;
+        $scope.order.total = $scope.order.total.toFixed(2);
+        $scope.order.total = $scope.order.total.toString();
 
-      $scope.order.total += 5;
-      $scope.order.total = $scope.order.total.toFixed(2);
-      $scope.order.total = $scope.order.total.toString();
-
-      $scope.review = true;
+        $scope.review = true;
+    };
   };
 
   $scope.submitOrder = function () {
-    var req = {
-    	url: '/api/orders/new/',
-    	method: 'POST',
-    	headers: {
-    		'Authorization': "JWT " + $rootScope.sessionToken,
-        'Content-Type': 'application/json'
-    	},
-    	data: $scope.order
-    };
-    $http(req)
+    $http.post('/api/orders/new/', $scope.order)
     .success(function (data, status, headers, config) {
-      alert(data);
+      console.log(data);
+      $window.location.href = '#/orders/' + data.id + '/new/';
     })
     .error(function (data, status, headers, config) {
       console.log(data);
