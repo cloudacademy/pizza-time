@@ -22,8 +22,8 @@ docker-compose up db -d
 Now run these commands to configure the database and load the initial data:
 
 ```
-docker-compose run web python migrate.py migrate
-docker-compose run web python migrate.py loaddata initial_data
+docker-compose run web python manage.py migrate
+docker-compose run web python manage.py loaddata initial_data
 ```
 
 Now you are ready to run the app, to start the web server use this command:

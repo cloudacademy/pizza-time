@@ -90,11 +90,11 @@ WSGI_APPLICATION = 'pizza_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pizza',
-        'USER': 'root',
-        'PASSWORD': 'password',
-        'HOST': 'db',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'NAME': os.environ.get('DATABASE_NAME', ''),
+        'USER': os.environ.get('DATABASE_USER', ''),
+        'PASSWORD': os.environ.get('DATABASE_PASSWORD', ''),
+        'HOST': os.environ.get('DATABASE_HOST', ''),
+        'PORT': os.environ.get('DATABASE_PORT', ''),
     }
 }
 
