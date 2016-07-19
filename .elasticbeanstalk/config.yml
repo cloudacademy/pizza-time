@@ -1,0 +1,11 @@
+branch-defaults:
+  master:
+    environment: pizza-time-dev
+    group_suffix: null
+global:
+  application_name: pizza
+  default_ec2_keyname: ca-magalhaes1-oregon
+  default_platform: Python 2.7
+  default_region: us-west-2
+  profile: null
+  sc: git
