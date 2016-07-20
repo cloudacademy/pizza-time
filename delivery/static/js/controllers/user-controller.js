@@ -37,7 +37,7 @@ app.controller('UserCtrl', function ($scope, $http, $window, $rootScope) {
         $scope.isAuthenticated = true;
         var encodedProfile = data.token.split('.')[1];
         var profile = JSON.parse(url_base64_decode(encodedProfile));
-        $http({url: '/api/users/', method: 'GET'})
+        $http({url: '/api/users/', method: 'GET', headers: {'Authorization': 'JWT ' + data.token}})
           .success(function (data, status, headers, config) {
             for (var i = 0; i < data.length ; i++){
               if (data[i].username == $scope.user.username){
@@ -46,7 +46,7 @@ app.controller('UserCtrl', function ($scope, $http, $window, $rootScope) {
             };
           })
           .error(function (data, status, headers, config) {
-            alert(data);
+            console.log(data);
         });
       })
       .error(function (data, status, headers, config) {
