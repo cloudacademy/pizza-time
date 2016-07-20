@@ -1,2 +1,0 @@
-[aws:elasticbeanstalk:container:python]
-WSGIPath = pizza_project/wsgi.py
