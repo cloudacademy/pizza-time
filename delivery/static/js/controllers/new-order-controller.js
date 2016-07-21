@@ -52,6 +52,7 @@ app.controller('NewOrderCtrl', function ($scope, $http, $window, $rootScope) {
       $window.location.href = '#/orders/' + data.id + '/new/';
     })
     .error(function (data, status, headers, config) {
+      console.log($scope.order);
       console.log(data);
     });
   };
