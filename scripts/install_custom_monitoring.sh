@@ -1,4 +1,5 @@
 #!/bin/bash
+yum install -y perl-Switch perl-DateTime perl-Sys-Syslog perl-LWP-Protocol-https
 cd /
 mkdir /monitoring
 cd /monitoring
