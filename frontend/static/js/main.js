@@ -1,6 +1,8 @@
 //Loads Angular
 angular.module('pizza', ['ngRoute'])
-.config(function($routeProvider, $locationProvider, $rootScope){
+.config(function($routeProvider, $locationProvider){
+
+
   $locationProvider.html5Mode(false);
   $routeProvider.when('/', {
     templateUrl: 'static/partials/home.html'
@@ -20,7 +22,5 @@ angular.module('pizza', ['ngRoute'])
     templateUrl: 'static/partials/order.html',
     controller: 'GetOrderCtrl',
   });
-
-  $rootScope.APIURL = "http://ec2-52-40-45-37.us-west-2.compute.amazonaws.com"
 
 });

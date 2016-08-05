@@ -18,6 +18,11 @@ function url_base64_decode(str) {
 }
 
 app.controller('UserCtrl', function ($scope, $http, $window, $rootScope) {
+
+  $rootScope.APIURL = "http://ec2-52-40-45-37.us-west-2.compute.amazonaws.com"
+
+
+
   $scope.user = {username: 'jklimber', password: 'start123'};
   $scope.isAuthenticated = false;
   $scope.welcome = '';
