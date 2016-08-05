@@ -10,5 +10,4 @@ yum install -y git mysql-devel mysql-libs kernel-devel
 git clone https://github.com/cloudacademy/pizza-time
 cd pizza-time
 pip install -r requirements.txt
-python manage.py collectstatic --no-input
 python manage.py runserver 0.0.0.0:80

@@ -1,0 +1,36 @@
+<div class="container">
+  <div ng-show="isNewOrder" class="alert alert-success fade in">
+    <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Hooray!</strong> You pizza will arrive in 30 minutes.
+</div>
+
+  <div class="row">
+    <h3>Order #{{order.id}}</h3>
+    <hr>
+    <table class="table table-hover">
+     <thead>
+       <tr>
+         <th>Client</th>
+         <th>Pizzas</th>
+         <th>Total</th>
+         <th>Status</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+          <td>{{order.user}}</td>
+         <td><p ng-repeat="pizza in order.pizzas">
+           {{pizza}}
+         </p></td>
+         <td>{{order.total}}</td>
+         <td>{{order.status}}</td>
+       </tr>
+     </tbody>
+    </table>
+    <br>
+    <a href="#/orders">All orders</a>
+  </div>
+
+
+
+</div>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" ng-app="pizza">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pizza time!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="Pizza, time, awesome, cloud academy">
+    <meta name="description" content="">
+    <link href="static/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
+    <link href="static/css/main.css" rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="static/img/favicon.png">
+  </head>
+  <body ng-controller="UserCtrl">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/"><img src="static/img/brand.png" alt=""/></a>
+        </div>
+
+        <div ng-hide="isAuthenticated">
+          <form id="id_auth_form" class="navbar-form navbar-right" ng-submit="login()">
+            <div class="form-group">
+              <input ng-model="user.username" required name="username"
+              type="text" placeholder="Username" class="form-control">
+            </div>
+            <div class="form-group">
+              <input ng-model="user.password" required name="password" type="password"
+              placeholder="Password" class="form-control">
+            </div>
+            <div class="btn-group">
+              <input type="submit" class="btn btn-default" value="Login">
+            </div>
+          </form>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav" bs-active-link>
+            <li ng-show="isAuthenticated"><a href="#/new-order">New Order</a></li>
+            <li ng-show="isAuthenticated"><a href="#/orders">All orders</a></li>
+            <li><a href="#/about">About</a></li>
+            <li class="dropdown" ng-show="isAuthenticated">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ user.username }} <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#/new-order">New Order</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#/" ng-click="logout()">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="content">
+      <ng-view></ng-view>
+    </div>
+
+    <!-- jQuery -->
+    <script src="static/js/jquery-1.12.2.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="static/js/bootstrap.min.js"></script>
+    <!-- Angular scripts -->
+    <script src="static/js/angular.min.js"></script>
+    <script src="static/js/angular-route.min.js"></script>
+    <script src="static/js/main.js"></script>
+    <script src="static/js/directives/nav.js"></script>
+    <script src="static/js/controllers/user-controller.js"></script>
+    <script src="static/js/controllers/orders-controller.js"></script>
+    <script src="static/js/controllers/get-order-controller.js"></script>
+    <script src="static/js/controllers/new-order-controller.js"></script>
+
+
+  </body>
+</html>

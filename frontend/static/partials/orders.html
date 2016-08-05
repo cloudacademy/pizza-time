@@ -1,0 +1,24 @@
+<div class="container">
+
+  <h3>Orders</h3>
+  <hr>
+  <table class="table table-hover">
+   <thead>
+     <tr>
+       <th>ID</th>
+       <th>User</th>
+       <th>Status</th>
+       <th>Details</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr ng-repeat="order in orders">
+       <td>{{order.id}}</td>
+        <td>{{order.user}}</td>
+       <td>{{order.status}}</td>
+       <td><a href="#/orders/{{order.id}}/detail/">Details</a></td>
+     </tr>
+   </tbody>
+ </table>
+
+</div> <!-- /container -->

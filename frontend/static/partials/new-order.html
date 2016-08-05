@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <h3>New Order</h3>
+    <hr>
+    <br>
+    <form class="form" ng-submit="checkout()">
+      <p>
+        Select the pizzas
+      </p>
+      <select multiple class="form-control" ng-model="cart">
+        <option ng-repeat="pizza in pizzasList" value="{{pizza}}">{{pizza.name}} - ${{pizza.price}}</option>
+      </select>
+      <br>
+      <div class="btn-group">
+        <input type="submit" class="btn btn-default" value="Checkout">
+      </div>
+    </form>
+    <hr>
+    <br>
+  </div>
+
+  <div class="row" ng-show="review">
+    <h5>Confirm you order:</h5>
+    <br>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="pizza in selectedPizzas">
+          <td>{{pizza.name}}</td>
+          <td>$ {{pizza.price}}</td>
+        </tr>
+        <tr>
+          <td>Delivery</td>
+          <td>$ 5.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 class="text-right">
+      <strong>Total:</strong> ${{order.total}}
+    </h4>
+
+    <br>
+
+    <form class="form" ng-submit="submitOrder()">
+      <div class="btn-group">
+        <input type="submit" class="btn btn-primary" value="Order">
+      </div>
+    </form>
+  </div>
+
+
+</div>

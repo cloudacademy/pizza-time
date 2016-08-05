@@ -1,0 +1,23 @@
+.content{
+  padding-top: 75px;
+}
+
+body{
+  font-size: 150%;
+}
+
+/*.navbar-brand,
+.navbar-nav li a {
+    line-height: 50px;
+    height: 50px;
+    padding-top: 0;
+}*/
+
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 10px;
+  width: auto;
+}
