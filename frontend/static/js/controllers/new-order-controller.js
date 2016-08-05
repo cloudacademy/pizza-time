@@ -5,7 +5,7 @@ app.controller('NewOrderCtrl', function ($scope, $http, $window, $rootScope) {
   $scope.cart = [];
   $scope.review = false;
 
-  $http({url: $rootScope.APIURL + '/api/pizzas/get', method: 'GET'})
+  $http({url: $rootScope.APIURL + '/api/pizzas/get/', method: 'GET'})
   .success(function (data, status, headers, config) {
     $scope.pizzasList = data;
   })

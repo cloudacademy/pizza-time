@@ -1,8 +1,6 @@
 //Loads Angular
-angular.module('pizza', ['ngRoute'])
+angular.module('pizza', ['ngRoute', 'ngResource'])
 .config(function($routeProvider, $locationProvider){
-
-
   $locationProvider.html5Mode(false);
   $routeProvider.when('/', {
     templateUrl: 'static/partials/home.html'
@@ -23,4 +21,8 @@ angular.module('pizza', ['ngRoute'])
     controller: 'GetOrderCtrl',
   });
 
-});
+})
+.config(['$resourceProvider', function($resourceProvider) {
+  // Don't strip trailing slashes from calculated URLs
+  $resourceProvider.defaults.stripTrailingSlashes = false;
+}]);
