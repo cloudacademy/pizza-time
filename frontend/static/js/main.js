@@ -22,6 +22,9 @@ angular.module('pizza', ['ngRoute', 'ngResource'])
   });
 
 })
+.run(function($rootScope) {
+  $rootScope.APIURL = "http://api.pizza.clouda.rocks";
+})
 .config(['$resourceProvider', function($resourceProvider) {
   // Don't strip trailing slashes from calculated URLs
   $resourceProvider.defaults.stripTrailingSlashes = false;
