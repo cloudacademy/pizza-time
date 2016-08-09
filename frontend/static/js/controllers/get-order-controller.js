@@ -6,7 +6,7 @@ app.controller('GetOrderCtrl', [ '$scope', '$routeParams', '$http', '$rootScope'
     $scope.isNewOrder = true;
   };
 
-  $http({url: $rootScope.APIURL + '/api/orders/get/' + id, method: 'GET'})
+  $http({url: $rootScope.APIURL + '/api/orders/get/' + id + '/', method: 'GET'})
   .success(function (data, status, headers, config) {
     $scope.order = data;
   })
