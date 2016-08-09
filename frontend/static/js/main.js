@@ -29,3 +29,4 @@ angular.module('pizza', ['ngRoute', 'ngResource'])
   // Don't strip trailing slashes from calculated URLs
   $resourceProvider.defaults.stripTrailingSlashes = false;
 }]);
+//change
