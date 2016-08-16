@@ -1,7 +1,17 @@
+Certified SysOps Administrator for AWS
+-----------------------------
+
+This repository is part of the [SysOps Administrator—Associate Certification for AWS](https://cloudacademy.com/learning-paths/aws-sysops-7/) Learning Path
+
+###Reading material
+
+  - [Overview of security processes](http://d0.awsstatic.com/whitepapers/Security/AWS%20Security%20Whitepaper.pdf)
+  - [Amazon Virtual Private Cloud Connectivity Options](http://media.amazonwebservices.com/AWS_Amazon_VPC_Connectivity_Options.pdf)
+  - [Troubleshooting EC2 connectivity issues](https://aws.amazon.com/premiumsupport/knowledge-center/linux-credentials-error/)
+  - [General FAQs](https://aws.amazon.com/premiumsupport/knowledge-center/)
+
 Pizza Time!
 ---------------
-
-This is a simple app written in Python and Angular.JS that simulates a pizza delivery system.
 
 ###Run the dev environment
 
