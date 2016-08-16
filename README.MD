@@ -3,13 +3,15 @@ Certified SysOps Administrator for AWS
 
 This repository is part of the [SysOps Administrator — Associate Certification for AWS](https://cloudacademy.com/learning-paths/aws-sysops-7/) Learning Path
 
-###Reading material
+###Further material
 
   - [Whitepaper: Overview of security processes](http://d0.awsstatic.com/whitepapers/Security/AWS%20Security%20Whitepaper.pdf)
   - [Whitepaper: Amazon Virtual Private Cloud Connectivity Options](http://media.amazonwebservices.com/AWS_Amazon_VPC_Connectivity_Options.pdf)
   - [Whitepaper: Operational checklists for AWS (Preparing for security assessments)](http://media.amazonwebservices.com/AWS_Operational_Checklists.pdf)
-  - [Troubleshooting EC2 connectivity issues](https://aws.amazon.com/premiumsupport/knowledge-center/linux-credentials-error/)
-  - [General FAQs](https://aws.amazon.com/premiumsupport/knowledge-center/)
+  - [Page: Troubleshooting EC2 connectivity issues](https://aws.amazon.com/premiumsupport/knowledge-center/linux-credentials-error/)  
+  - [Video: How should I connect to my Amazon virtual private cloud?](https://aws.amazon.com/premiumsupport/knowledge-center/connect-vpc/)
+  - [Video: How do I troubleshoot problems connecting to my EC2 Linux instance using SSH?](https://aws.amazon.com/premiumsupport/knowledge-center/ec2-linux-ssh-troubleshooting/)
+  - [Page: General FAQs](https://aws.amazon.com/premiumsupport/knowledge-center/)
 
 Pizza Time!
 ---------------
