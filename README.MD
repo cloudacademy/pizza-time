@@ -1,7 +1,7 @@
 Certified SysOps Administrator for AWS
 -----------------------------
 
-This repository is part of the [SysOps Administrator—Associate Certification for AWS](https://cloudacademy.com/learning-paths/aws-sysops-7/) Learning Path
+This repository is part of the [SysOps Administrator — Associate Certification for AWS](https://cloudacademy.com/learning-paths/aws-sysops-7/) Learning Path
 
 ###Reading material
 
