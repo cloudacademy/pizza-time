@@ -76,6 +76,6 @@ eb deploy --staged
 
 Take a look at the [install-pizza-time.sh](/scripts/install-pizza-time.sh) script an make the needed changes in the Environment Variables to point to your database instance. Then use the script as the User Data script in your instances or Launch configuration.
 
-###Angular files
+###Angular app
 
 The Angular files are available at the [Frontend](/frontend) folder, make sure that you will change the variable called "$rootScope.APIURL" in the [main.js](/frontend/static/js/main.js) file to point to your API endpoint.
