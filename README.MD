@@ -5,8 +5,9 @@ This repository is part of the [SysOps Administrator — Associate Certification
 
 ###Reading material
 
-  - [Overview of security processes](http://d0.awsstatic.com/whitepapers/Security/AWS%20Security%20Whitepaper.pdf)
-  - [Amazon Virtual Private Cloud Connectivity Options](http://media.amazonwebservices.com/AWS_Amazon_VPC_Connectivity_Options.pdf)
+  - [Whitepaper: Overview of security processes](http://d0.awsstatic.com/whitepapers/Security/AWS%20Security%20Whitepaper.pdf)
+  - [Whitepaper: Amazon Virtual Private Cloud Connectivity Options](http://media.amazonwebservices.com/AWS_Amazon_VPC_Connectivity_Options.pdf)
+  - [Whitepaper: Operational checklists for AWS (Preparing for security assessments)](http://media.amazonwebservices.com/AWS_Operational_Checklists.pdf)
   - [Troubleshooting EC2 connectivity issues](https://aws.amazon.com/premiumsupport/knowledge-center/linux-credentials-error/)
   - [General FAQs](https://aws.amazon.com/premiumsupport/knowledge-center/)
 
